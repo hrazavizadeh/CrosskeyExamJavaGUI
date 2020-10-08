@@ -1,5 +1,5 @@
 Run Path:
-	\CrossKeyExamJavaGUI\MonthlyPayCalcApp\build\classes\customerLoanGUI\
+	CrossKeyExamJavaGUI\MonthlyPayCalcApp\dist\GUIFormExamples.jar
 
 Language:
 	Java
