@@ -1,0 +1,9 @@
+Run Path:
+	\CrossKeyExamJavaGUI\MonthlyPayCalcApp\build\classes\customerLoanGUI\
+
+Language:
+	Java
+
+IDE:
+	APACHE NetBeans IDE 12.1
+	
