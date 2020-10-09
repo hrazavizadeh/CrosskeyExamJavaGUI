@@ -7,8 +7,12 @@ import java.io.BufferedReader;
 import javax.swing.JFileChooser;
 import java.io.File;   
 import java.io.FileFilter;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -146,8 +150,9 @@ public class frmMain extends javax.swing.JFrame {
             importFileDialog.setFileFilter(new FileNameExtensionFilter("Text File (*.txt)", "txt"));
             if(importFileDialog.showOpenDialog(this)==JFileChooser.APPROVE_OPTION)
             {              
-                //open the file and send every line to creatCustomer method and fill an arraylist
-                BufferedReader reader = new BufferedReader(new FileReader(importFileDialog.getSelectedFile()));
+                //open the file and send every line to creatCustomer method and fill an arraylist                
+                BufferedReader reader = Files.newBufferedReader(importFileDialog.getSelectedFile().toPath(), StandardCharsets.UTF_8);
+                                        
                 reader.readLine();
                 while ((record = reader.readLine()) != null)
 			if(record.length()>0 && !record.equals("."))
